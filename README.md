@@ -119,7 +119,7 @@ ax.set_xlabel('Gender')
 ax.set_ylabel('Average Purchase Amount')
 
 for p in ax.patches:
-    percentage = (f'${100 * p.get_height():.2f}\n({p.get_height()/total_avg_purchase*100:.1f}%)')
+    percentage = (f'${p.get_height():.2f}\n({p.get_height()/total_avg_purchase*100:.1f}%)')
     x = p.get_x() + p.get_width() / 2
     y = p.get_height()
     ax.annotate(percentage, (x, y), ha='center', va='bottom')
@@ -130,7 +130,7 @@ gender_groups = df.Gender.unique()
 patches = [mpatches.Patch(color=colors[i], label=gender) for i, gender in enumerate(gender_groups)]
 ax.legend(handles=patches, title='Gender')
 ```
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/f902892b-ef58-40b0-a741-c294dafe2e53)
 
 - Higher Average Purchase by Males: Male customers have a higher average purchase amount, contributing 51.9% of the total, indicating they tend to spend more per transaction compared to female customers.
 - Significant Contribution from Females: Female customers, while spending slightly less on average, still contribute a substantial 48.1% to the total purchase amount, underscoring their importance in the overall revenue.
